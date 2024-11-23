@@ -52,6 +52,27 @@ let getResponse = function (input) {
     return "Where JESUS is.";
   } else if (input.includes("when")) {
     return "When JESUS returns, obviously.";
+  } else if (
+    input.includes("is") ||
+    input.includes("are") ||
+    input.includes("am") ||
+    input.includes("was") ||
+    input.includes("were") ||
+    input.includes("will be") ||
+    input.includes("be") ||
+    input.includes("being") ||
+    input.includes("been") ||
+    input.includes("have") ||
+    input.includes("has") ||
+    input.includes("had") ||
+    input.includes("should") ||
+    input.includes("would") ||
+    input.includes("could") ||
+    input.includes("might") ||
+    input.includes("shall") ||
+    input.includes("will")
+  ) {
+    return "That's a great question. I'm glad that you are interested in that topic. The answer is NO.";
   } else {
     return "JESUS is always the answer.";
   }
