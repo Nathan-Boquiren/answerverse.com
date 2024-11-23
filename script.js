@@ -1,45 +1,38 @@
-document.addEventListener("keydown", handleEnter); // Attach a single event listener
+document.addEventListener("keydown", handleEnter);
 
 let isTyping = false;
 
-function handleEnter(event) {
+let handleEnter = function (event) {
   if (event.key === "Enter" && !isTyping) {
-    event.preventDefault(); // Prevent default form submission
-    isTyping = true; // Set flag to indicate typing in progress
+    event.preventDefault();
+    isTyping = true;
 
     const inputElement = document.querySelector(".search-input");
     const answerElement = document.querySelector(".answer");
-    const userInput = inputElement.value.trim().toLowerCase(); // Get and normalize input
+    const userInput = inputElement.value.trim().toLowerCase();
 
-    // Determine the response based on keywords
     const response = getResponse(userInput);
 
-    // Ensure the element is visible
     answerElement.style.display = "block";
 
-    // Typing effect logic
     let index = 0;
-    answerElement.textContent = ""; // Clear previous content
+    answerElement.textContent = "";
 
     function typeText() {
       if (index < response.length) {
-        answerElement.textContent += response.charAt(index); // Append character
+        answerElement.textContent += response.charAt(index);
         index++;
-        setTimeout(typeText, 30); // Adjust speed (50ms delay between each character)
+        setTimeout(typeText, 30);
       } else {
-        // Stop the blinking cursor once typing is complete
         answerElement.style.borderRight = "none";
-        isTyping = false; // Reset the flag after typing is complete
+        isTyping = false;
       }
     }
 
-    // Start the typing animation
     typeText();
   }
-}
-
-// Function to determine the response based on keywords
-function getResponse(input) {
+};
+let getResponse = function (input) {
   if (!input.includes("?")) {
     return "Bru. Where is your question mark? Don't forget to include your question mark! Haven't you learned anything!? IF YOU ARE ASKING A QUESTION, USE A QUESTION MARK!!!!!";
   } else if (input === "why?") {
@@ -63,4 +56,4 @@ function getResponse(input) {
   } else {
     return "JESUS is always the answer.";
   }
-}
+};
