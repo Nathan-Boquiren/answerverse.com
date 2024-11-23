@@ -37,7 +37,7 @@ let getResponse = function (input) {
   } else if (input === "why?") {
     return "Why what? Be specific, Bob.";
   } else if (input.includes("what time is it?")) {
-    return "It's JESUS time.";
+    return "It's time for you to get a watch, bro.";
   } else if (input.includes("what day is it")) {
     return "It's the Lord's day.";
   } else if (input.includes("why")) {
@@ -52,6 +52,8 @@ let getResponse = function (input) {
     return "Where JESUS is.";
   } else if (input.includes("when")) {
     return "When JESUS returns, obviously.";
+  } else if (input.includes("how")) {
+    return "Great question. The answer is JESUS.";
   } else if (
     input.includes("are") ||
     input.includes("was") ||
