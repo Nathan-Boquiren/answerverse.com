@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #36454F;
+}
+.title {
+    color: white;
+    position: absolute;
+    top: 100px;
+    font-family: "Audiowide", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
+    font-size: clamp(28px, 5vw, 50px);
+}
+.search-bar {
+    
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 40vw;
+    min-width: 300px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    outline: none;
+    transition: outline 0.1s ease, background-color 0.1s ease;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.247);
+}
+.search-bar:focus-within {
+    outline: 4px solid #538eb6;
+    background-color: rgb(255, 255, 255);
+}
+.search-input {
+    font-size: clamp(16px, 1.5vw, 20px);
+    padding: 10px;
+    background-color: #fff0;
+    border: none;
+    width: 40vw;
+    min-width: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #361f1f;
+}
+.search-input::placeholder {
+    color: #36454F;
+}
+.search-input:focus {
+    outline: none;
+}
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #36454F;
+    z-index: 10;
+}
+
+.response-box {
+    margin-top: 30px;
+    padding: 50px;
+    width: 40vw;
+    min-width: 300px;
+    height: 40vh;
+    background-color: #577183;
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.answer {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+    text-wrap: wrap;
+}
