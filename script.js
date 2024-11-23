@@ -1,12 +1,9 @@
-document.addEventListener("keydown", handleEnter);
-
 let isTyping = false;
 
 let handleEnter = function (event) {
   if (event.key === "Enter" && !isTyping) {
     event.preventDefault();
     isTyping = true;
-
     const inputElement = document.querySelector(".search-input");
     const answerElement = document.querySelector(".answer");
     const userInput = inputElement.value.trim().toLowerCase();
@@ -17,7 +14,6 @@ let handleEnter = function (event) {
 
     let index = 0;
     answerElement.textContent = "";
-
     function typeText() {
       if (index < response.length) {
         answerElement.textContent += response.charAt(index);
@@ -32,6 +28,9 @@ let handleEnter = function (event) {
     typeText();
   }
 };
+
+document.addEventListener("keydown", handleEnter);
+
 let getResponse = function (input) {
   if (!input.includes("?")) {
     return "Bru. Where is your question mark? Don't forget to include your question mark! Haven't you learned anything!? IF YOU ARE ASKING A QUESTION, USE A QUESTION MARK!!!!!";

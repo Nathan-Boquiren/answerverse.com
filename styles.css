@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
-
 body {
     height: 100vh;
     display: flex;
@@ -69,7 +68,6 @@ body {
     color: #36454F;
     z-index: 10;
 }
-
 .response-box {
     margin-top: 30px;
     padding: 50px;
@@ -82,7 +80,6 @@ body {
     align-items: flex-start;
     justify-content: left;
 }
-
 .answer {
     font-size: clamp(16px, 1.5vw, 20px);
     font-weight: 500;
