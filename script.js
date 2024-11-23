@@ -69,15 +69,22 @@ let getResponse = function (input) {
   } else if (
     input.includes("is") ||
     input.includes("am") ||
-    input.includes("were") ||
-    input.includes("be") ||
-    input.includes("been") ||
-    input.includes("has") ||
-    input.includes("should") ||
-    input.includes("could") ||
     input.includes("shall")
   ) {
     return "That's a great question. I'm glad that you are interested in that topic. The answer is YES.";
+  } else if (
+    input.includes("were") ||
+    input.includes("has") ||
+    input.includes("should") ||
+    input.includes("could")
+  ) {
+    return "You know something. . .I don't really know. Why don't you google it or something.";
+  } else if (
+    input.includes("do") ||
+    input.includes("did") ||
+    input.includes("does")
+  ) {
+    return "Ha! What kind of question is that?  NO! obviously. ";
   } else {
     return "JESUS is always the answer.";
   }
