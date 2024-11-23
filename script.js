@@ -84,7 +84,7 @@ let getResponse = function (input) {
     input.includes("did") ||
     input.includes("does")
   ) {
-    return "Ha! What kind of question is that?  NO! obviously. ";
+    return "Ha! What kind of question is that?  NO! obviously.";
   } else {
     return "JESUS is always the answer.";
   }
