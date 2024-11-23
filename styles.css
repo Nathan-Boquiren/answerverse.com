@@ -79,6 +79,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: left;
+    overflow: scroll;
 }
 .answer {
     font-size: clamp(16px, 1.5vw, 20px);

@@ -33,11 +33,11 @@ document.addEventListener("keydown", handleEnter);
 
 let getResponse = function (input) {
   if (!input.includes("?")) {
-    return "Bru. Where is your question mark? Don't forget to include your question mark! Haven't you learned anything!? IF YOU ARE ASKING A QUESTION, USE A QUESTION MARK!!!!!";
+    return "Bruh. Where is your question mark? Don't forget to include your question mark! Haven't you learned anything!? IF YOU ARE ASKING A QUESTION, USE A QUESTION MARK!!!!!";
   } else if (input === "why?") {
     return "Why what? Be specific, Bob.";
   } else if (input.includes("what time is it?")) {
-    return "It's time for you to get a watch, bro.";
+    return "It's time for you to get a watch, bruh.";
   } else if (input.includes("what day is it")) {
     return "It's the Lord's day.";
   } else if (input.includes("why")) {
