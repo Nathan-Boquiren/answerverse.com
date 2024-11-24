@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
+
 body {
     height: 100vh;
     display: flex;
@@ -13,6 +14,7 @@ body {
     flex-direction: column;
     background-color: #36454F;
 }
+
 .title {
     color: white;
     position: absolute;
@@ -22,8 +24,8 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
     font-size: clamp(28px, 5vw, 50px);
 }
+
 .search-bar {
-    
     display: flex;
     align-items: center;
     height: 60px;
@@ -36,10 +38,12 @@ body {
     transition: outline 0.1s ease, background-color 0.1s ease;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.247);
 }
+
 .search-bar:focus-within {
     outline: 4px solid #538eb6;
     background-color: rgb(255, 255, 255);
 }
+
 .search-input {
     font-size: clamp(16px, 1.5vw, 20px);
     padding: 10px;
@@ -54,26 +58,32 @@ body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: #361f1f;
 }
+
 .search-input::placeholder {
     color: #36454F;
 }
+
 .search-input:focus {
     outline: none;
 }
+
 .search-icon {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
     color: #36454F;
-    z-index: 10;
+    z-index: 5;
 }
+
 .response-box {
     margin-top: 30px;
     padding: 50px;
     width: 40vw;
     min-width: 300px;
     height: 40vh;
+    min-height: 400px;
+    height: clamp(400px, 40vh, 600px);
     background-color: #577183;
     border-radius: 30px;
     display: flex;
@@ -81,6 +91,11 @@ body {
     justify-content: left;
     overflow: scroll;
 }
+
+.response-box::-webkit-scrollbar {
+    display: none;
+}
+
 .answer {
     font-size: clamp(16px, 1.5vw, 20px);
     font-weight: 500;

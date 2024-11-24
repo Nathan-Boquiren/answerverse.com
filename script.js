@@ -72,6 +72,8 @@ let getResponse = function (input) {
     input.includes("shall")
   ) {
     return "That's a great question. I'm glad that you are interested in that topic. The answer is YES.";
+  } else if (input.includes("should i")) {
+    return "Absolutly! That's a great idea! In fact, that's the GREATEST IDEA I've ever heard! You should definitely do that!";
   } else if (
     input.includes("were") ||
     input.includes("has") ||
