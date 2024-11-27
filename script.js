@@ -68,7 +68,11 @@ let getResponse = function (input) {
     return "Where JESUS is.";
   } else if (input.includes("when")) {
     return "When JESUS returns, obviously.";
-  } else if (input === "how to blow up the moon?") {
+  } else if (
+    input === "how to blow up the moon?" ||
+    input === "how do i blow up the moon?" ||
+    input === "how can i blow up the moon?"
+  ) {
     return "First, you’ll need to gather a trillion tons of TNT, a giant slingshot, and Jeff Bezos’ rocket for moon access. Then, assemble a committee of mad scientists, a wizard, and at least one chicken (for luck). Fire the TNT at the moon with the slingshot while the wizard chants “Boomus Lunaris Maximus.” Finally, watch as the moon politely declines to explode because it’s too classy for such nonsense, leaving the chicken as the only one who accomplished anything useful.";
   } else if (input.includes("how much")) {
     return "As much as you want :)";
